@@ -1,0 +1,71 @@
+server:
+  port: 8081
+  servlet:
+    context-path: /api/v1.0.0
+
+spring:
+  application:
+    name: product-service
+  profiles:
+    active: default
+
+  config:
+    import: "optional:configserver:http://localhost:8071/"
+  datasource:
+    url: jdbc:mysql://localhost:3306/products
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update     # create | update | validate | none
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  health:
+    readinessstate:
+      enabled: true
+    livenessstate:
+      enabled: true
+  endpoint:
+    health:
+      probes:
+        enabled: true
+      show-details: always
+    info:
+      access: read_only
+  info:
+    env:
+      enabled: true
+
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    fetchRegistry: true
+    registerWithEureka: true
+    serviceUrl:
+      defaultZone: http://localhost:8070/eureka/
+
+info:
+  app:
+    name: Product Service MS
+    description: Handles product management, images, categories, and filtering.
+    version: 1.0.0
+    profile: default
+    owner: Rupesh Dulal
+    website: https://www.alfarays.tech
+  build:
+    timestamp: "@timestamp@"
+  developer:
+    name: "Rupesh Dulal"
+    email: "rupeshdulal672@gmail.com"
+    github: "https://github.com/rupeshdulal"
+

@@ -1,0 +1,19 @@
+spring:
+  config:
+    activate:
+      on-profile: "staging"
+
+info:
+  app:
+    name: Cart Service MS
+    description: Handles cart management, and filtering.
+    version: 1.0.0
+    owner: Rupesh Dulal
+    website: https://www.alfarays.tech
+    profile: staging
+  build:
+    timestamp: "@timestamp@"
+  developer:
+    name: "Rupesh Dulal"
+    email: "rupeshdulal672@gmail.com"
+    github: "https://github.com/rupeshdulal"

@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="bd3821a4-c1c5-4740-bcb1-4f0326bf6f37" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/PURELY-GOODS/cart-service/src/main/java/com/alfarays/model/Message.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/PURELY-GOODS/cart-service/src/main/java/com/alfarays/resource/WelcomeResource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/PURELY-GOODS/docker/backend/product-service/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/PURELY-GOODS/docker/backend/product-service/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/PURELY-GOODS/docker/docker-compose/default/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/PURELY-GOODS/order-service/src/main/java/com/alfarays/model/Message.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/PURELY-GOODS/order-service/src/main/java/com/alfarays/resource/WelcomeResource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/PURELY-GOODS/payment-service/src/main/java/com/alfarays/model/Message.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/PURELY-GOODS/payment-service/src/main/java/com/alfarays/resource/WelcomeResource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.github/workflows/cart-service-pipeline.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.github/workflows/config-server-pipeline.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.github/workflows/discovery-server-pipeline.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.github/workflows/gateway-server-pipeline.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.github/workflows/order-service-pipeline.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.github/workflows/payment-service-pipeline.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.github/workflows/product-service-pipeline.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cart-service/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cart-service/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cart-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cart-service/src/main/java/com/alfarays/CartServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cart-service/src/main/java/com/alfarays/resource/CartResource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cart-service/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cart-service/src/test/java/com/alfarays/CartServiceApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config-server/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config-server/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config-server/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config-server/src/main/java/com/alfarays/ConfigServerApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config-server/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config-server/src/main/resources/config/cart-service-prod.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config-server/src/main/resources/config/cart-service-staging.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config-server/src/main/resources/config/cart-service.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config-server/src/main/resources/config/discovery-server.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config-server/src/main/resources/config/gateway-server.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config-server/src/main/resources/config/order-service-prod.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config-server/src/main/resources/config/order-service-staging.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config-server/src/main/resources/config/order-service.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config-server/src/main/resources/config/payment-service-prod.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config-server/src/main/resources/config/payment-service-staging.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config-server/src/main/resources/config/payment-service.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config-server/src/main/resources/config/product-service-prod.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config-server/src/main/resources/config/product-service-staging.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config-server/src/test/java/com/alfarays/ConfigServerApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/discovery-server/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/discovery-server/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/discovery-server/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/discovery-server/src/main/java/com/alfarays/DiscoveryServerApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/discovery-server/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/discovery-server/src/test/java/com/alfarays/DiscoveryServerApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/backend/cart-service/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/backend/cart-service/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/backend/config-server/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/backend/config-server/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/backend/discovery-server/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/backend/discovery-server/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/backend/gateway-server/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/backend/gateway-server/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/backend/order-service/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/backend/order-service/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/backend/payment-service/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/backend/payment-service/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/backend/product-service/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/backend/product-service/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/docker-compose/default" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/docker-compose/staging/common-config.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/docker-compose/staging/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway-server/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway-server/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway-server/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway-server/src/main/java/com/alfarays/GatewayServerApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway-server/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway-server/src/test/java/com/alfarays/GatewayServerApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/alfarays/OrderServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/alfarays/client/ProductServiceClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/alfarays/model/CategoryResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/alfarays/model/ImageResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/alfarays/model/ProductResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/alfarays/resource/OrderResource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/test/java/com/alfarays/OrderServiceApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-service/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-service/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/alfarays/PaymentServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/alfarays/resource/PaymentResource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-service/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-service/src/test/java/com/alfarays/PaymentServiceApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/alfarays/ProductServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/alfarays/audit/AuditAwareImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/alfarays/configuration/StorageProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/alfarays/entity/BaseEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/alfarays/entity/Category.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/alfarays/entity/Image.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/alfarays/entity/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/alfarays/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/alfarays/exception/ProductAlreadyExistsException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/alfarays/exception/ResourceNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/alfarays/mapper/CategoryMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/alfarays/mapper/ProductMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/alfarays/model/CategoryRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/alfarays/model/CategoryResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/alfarays/model/ErrorResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/alfarays/model/GlobalResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/alfarays/model/ImageRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/alfarays/model/ImageResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/alfarays/model/ProductRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/alfarays/model/ProductResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/alfarays/repository/CategoryRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/alfarays/repository/ImageRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/alfarays/repository/ProductRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/alfarays/resource/CategoryResource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/alfarays/resource/ProductResource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/alfarays/service/CategoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/alfarays/service/ICategoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/alfarays/service/IProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/alfarays/service/ImageService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/alfarays/service/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/java/com/alfarays/specification/ProductSpecification.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product-service/src/test/java/com/alfarays/ProductServiceApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../microservices-3.4.1/section8/configserver/src/main/resources/config/eurekaserver.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/.github/workflows/product-service-pipeline.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/AUTHORIZATION-SERVICE/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/AUTHORIZATION-SERVICE/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/AUTHORIZATION-SERVICE/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/AUTHORIZATION-SERVICE/src/main/java/com/alfarays/AuthorizationServiceApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/AUTHORIZATION-SERVICE/src/main/resources/application-dev.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/AUTHORIZATION-SERVICE/src/main/resources/application-prod.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/AUTHORIZATION-SERVICE/src/main/resources/application-staging.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/AUTHORIZATION-SERVICE/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/AUTHORIZATION-SERVICE/src/test/java/com/alfarays/AuthorizationServiceApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/CART-SERVICE/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/CART-SERVICE/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/CART-SERVICE/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/CART-SERVICE/src/main/java/com/alfarays/CartServiceApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/CART-SERVICE/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/CART-SERVICE/src/test/java/com/alfarays/CartServiceApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/CONFIG-SERVER/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/CONFIG-SERVER/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/CONFIG-SERVER/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/CONFIG-SERVER/src/main/java/com/alfarays/ConfigServerApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/CONFIG-SERVER/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/CONFIG-SERVER/src/test/java/com/alfarays/ConfigServerApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/DISCOVERY-SERVER/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/DISCOVERY-SERVER/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/DISCOVERY-SERVER/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/DISCOVERY-SERVER/src/main/java/com/alfarays/DiscoveryServerApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/DISCOVERY-SERVER/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/DISCOVERY-SERVER/src/test/java/com/alfarays/DiscoveryServerApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/GATEWAY-SERVER/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/GATEWAY-SERVER/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/GATEWAY-SERVER/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/GATEWAY-SERVER/src/main/java/com/alfarays/GatewayServerApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/GATEWAY-SERVER/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/GATEWAY-SERVER/src/test/java/com/alfarays/GatewayServerApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/IMAGES/EVENT FLOW &amp; SERVICE CHOREOGRAPHY.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/IMAGES/inventory-management-flow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/NOTIFICATION-SERVICE/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/NOTIFICATION-SERVICE/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/NOTIFICATION-SERVICE/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/NOTIFICATION-SERVICE/src/main/java/com/alfarays/NotificationServiceApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/NOTIFICATION-SERVICE/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/NOTIFICATION-SERVICE/src/test/java/com/alfarays/NotificationServiceApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/ORDER-SERVICE/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/ORDER-SERVICE/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/ORDER-SERVICE/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/ORDER-SERVICE/src/main/java/com/alfarays/OrderServiceApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/ORDER-SERVICE/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/ORDER-SERVICE/src/test/java/com/alfarays/OrderServiceApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/PAYMENT-SERVICE/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/PAYMENT-SERVICE/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/PAYMENT-SERVICE/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/PAYMENT-SERVICE/src/main/java/com/alfarays/PaymentServiceApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/PAYMENT-SERVICE/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/PAYMENT-SERVICE/src/test/java/com/alfarays/PaymentServiceApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/PRODUCT-SERVICE/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/PRODUCT-SERVICE/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/PRODUCT-SERVICE/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/PRODUCT-SERVICE/src/main/java/com/alfarays/ProductServiceApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/PRODUCT-SERVICE/src/main/java/com/alfarays/audit/AuditAwareImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/PRODUCT-SERVICE/src/main/java/com/alfarays/configuration/StorageProperties.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/PRODUCT-SERVICE/src/main/java/com/alfarays/entity/BaseEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/PRODUCT-SERVICE/src/main/java/com/alfarays/entity/Category.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/PRODUCT-SERVICE/src/main/java/com/alfarays/entity/Image.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/PRODUCT-SERVICE/src/main/java/com/alfarays/entity/Product.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/PRODUCT-SERVICE/src/main/java/com/alfarays/exception/GlobalExceptionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/PRODUCT-SERVICE/src/main/java/com/alfarays/exception/ProductAlreadyExistsException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/PRODUCT-SERVICE/src/main/java/com/alfarays/exception/ResourceNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/PRODUCT-SERVICE/src/main/java/com/alfarays/mapper/CategoryMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/PRODUCT-SERVICE/src/main/java/com/alfarays/mapper/ProductMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/PRODUCT-SERVICE/src/main/java/com/alfarays/model/CategoryRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/PRODUCT-SERVICE/src/main/java/com/alfarays/model/CategoryResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/PRODUCT-SERVICE/src/main/java/com/alfarays/model/ErrorResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/PRODUCT-SERVICE/src/main/java/com/alfarays/model/GlobalResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/PRODUCT-SERVICE/src/main/java/com/alfarays/model/ImageRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/PRODUCT-SERVICE/src/main/java/com/alfarays/model/ImageResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/PRODUCT-SERVICE/src/main/java/com/alfarays/model/ProductRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/PRODUCT-SERVICE/src/main/java/com/alfarays/model/ProductResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/PRODUCT-SERVICE/src/main/java/com/alfarays/repository/CategoryRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/PRODUCT-SERVICE/src/main/java/com/alfarays/repository/ImageRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/PRODUCT-SERVICE/src/main/java/com/alfarays/repository/ProductRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/PRODUCT-SERVICE/src/main/java/com/alfarays/resource/CategoryResource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/PRODUCT-SERVICE/src/main/java/com/alfarays/resource/ProductResource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/PRODUCT-SERVICE/src/main/java/com/alfarays/service/CategoryService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/PRODUCT-SERVICE/src/main/java/com/alfarays/service/ICategoryService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/PRODUCT-SERVICE/src/main/java/com/alfarays/service/IProductService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/PRODUCT-SERVICE/src/main/java/com/alfarays/service/ImageService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/PRODUCT-SERVICE/src/main/java/com/alfarays/service/ProductService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/PRODUCT-SERVICE/src/main/java/com/alfarays/specification/ProductSpecification.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/PRODUCT-SERVICE/src/main/resources/application-prod.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/PRODUCT-SERVICE/src/main/resources/application-staging.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/PRODUCT-SERVICE/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/PRODUCT-SERVICE/src/main/resources/images/e3e85240-62f6-4c03-bd9e-77ef00b80bf6_MRP.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/PRODUCT-SERVICE/src/test/java/com/alfarays/ProductServiceApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/USER-SERVICE/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/USER-SERVICE/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/USER-SERVICE/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/USER-SERVICE/src/main/java/com/alfarays/UserServiceApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/USER-SERVICE/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/USER-SERVICE/src/test/java/com/alfarays/UserServiceApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/docker/backend/order-service/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/docker/backend/order-service/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/docker/backend/product-service/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/docker/backend/product-service/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/docker/docker-compose/default/docker-compose.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/docker/docker-compose/prod/docker-compose.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/docker/docker-compose/staging/docker-compose.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/docker/frontend/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/COURSE-MANAGEMENT-SYSTEM/.github/workflows/backend-pipeline.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/COURSE-MANAGEMENT-SYSTEM/.github/workflows/backend-pipeline.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/COURSE-MANAGEMENT-SYSTEM/.github/workflows/frontend-pipeline.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/COURSE-MANAGEMENT-SYSTEM/.github/workflows/frontend-pipeline.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/COURSE-MANAGEMENT-SYSTEM/backend/src/main/java/com/alfarays/configuration/BeanConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/COURSE-MANAGEMENT-SYSTEM/backend/src/main/java/com/alfarays/configuration/BeanConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/COURSE-MANAGEMENT-SYSTEM/backend/src/main/java/com/alfarays/model/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/COURSE-MANAGEMENT-SYSTEM/backend/src/main/java/com/alfarays/model/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/COURSE-MANAGEMENT-SYSTEM/backend/src/main/java/com/alfarays/resource/WelcomeResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/COURSE-MANAGEMENT-SYSTEM/backend/src/main/java/com/alfarays/resource/WelcomeResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/COURSE-MANAGEMENT-SYSTEM/docker/backend/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/COURSE-MANAGEMENT-SYSTEM/docker/backend/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/COURSE-MANAGEMENT-SYSTEM/docker/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/COURSE-MANAGEMENT-SYSTEM/docker/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/COURSE-MANAGEMENT-SYSTEM/docker/frontend/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/COURSE-MANAGEMENT-SYSTEM/docker/frontend/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/COURSE-MANAGEMENT-SYSTEM/frontend/nginx.conf" beforeDir="false" afterPath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/COURSE-MANAGEMENT-SYSTEM/frontend/nginx.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/DEV-SEC-OPS-DEMO/.github/workflows/deploy.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/DEV-SEC-OPS-DEMO/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/DEV-SEC-OPS-DEMO/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/DEV-SEC-OPS-DEMO/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/DEV-SEC-OPS-DEMO/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/DEV-SEC-OPS-DEMO/src/main/java/com/alfarays/resource/WelcomeResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/DEV-SEC-OPS-DEMO/src/main/java/com/alfarays/resource/WelcomeResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/DEV-SEC-OPS-DEMO/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/DEV-SEC-OPS-DEMO/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DEVOPS/DAY-01/backend/src/main/resources/application-dev.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DSA/com.alsarays.app/MASTERCLASS/twodarray/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DSA/com.alsarays.app/MASTERCLASS/twodarray/TwoDArray.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DSA/com.alsarays.app/MASTERCLASS/twodarray/projects/BestTimeBuySellStock.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DSA/com.alsarays.app/MASTERCLASS/twodarray/projects/DuplicateNumber.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DSA/com.alsarays.app/MASTERCLASS/twodarray/projects/Exercise.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DSA/com.alsarays.app/MASTERCLASS/twodarray/projects/Exercise2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DSA/com.alsarays.app/MASTERCLASS/twodarray/projects/Exercise3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DSA/com.alsarays.app/MASTERCLASS/twodarray/projects/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DSA/com.alsarays.app/MASTERCLASS/twodarray/projects/MaxProduct.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DSA/com.alsarays.app/MASTERCLASS/twodarray/projects/MissingNumber.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DSA/com.alsarays.app/MASTERCLASS/twodarray/projects/NumberInArray.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DSA/com.alsarays.app/MASTERCLASS/twodarray/projects/Permutation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DSA/com.alsarays.app/MASTERCLASS/twodarray/projects/RemoveDuplicateSortedArray.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DSA/com.alsarays.app/MASTERCLASS/twodarray/projects/RotateMatrix.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DSA/com.alsarays.app/MASTERCLASS/twodarray/projects/TwoSum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DSA/com.alsarays.app/MASTERCLASS/twodarray/projects/UniqueArray.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DSA/com.alsarays.app/linkendlist/LinkedList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DSA/com.alsarays.app/linkendlist/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DSA/com.alsarays.app/linkendlist/Node.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GRAPHQL-DEMO/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GRAPHQL-DEMO/src/main/resources/graphql/schema.graphqls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IBA/GAMES-AND-AI/DIJ-ALGO.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IBA/GAMES-AND-AI/GAMES-AND-AI-CW1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IBA/GAMES-AND-AI/a_ star.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IBA/GAMES-AND-AI/dijkstraWeightedGraph.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../IBA/GAMES-AND-AI/test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MICROSERVICES-EASYBANK/ACCOUNT/src/main/java/com/alfarays/audit/AuditAwareImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MICROSERVICES-EASYBANK/ACCOUNT/src/main/java/com/alfarays/constants/AccountConstants.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MICROSERVICES-EASYBANK/ACCOUNT/src/main/java/com/alfarays/dto/AccountsDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MICROSERVICES-EASYBANK/ACCOUNT/src/main/java/com/alfarays/dto/CustomerDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MICROSERVICES-EASYBANK/ACCOUNT/src/main/java/com/alfarays/dto/ErrorResponseDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MICROSERVICES-EASYBANK/ACCOUNT/src/main/java/com/alfarays/dto/ResponseDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MICROSERVICES-EASYBANK/ACCOUNT/src/main/java/com/alfarays/entity/Accounts.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MICROSERVICES-EASYBANK/ACCOUNT/src/main/java/com/alfarays/entity/BaseEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MICROSERVICES-EASYBANK/ACCOUNT/src/main/java/com/alfarays/entity/Customer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MICROSERVICES-EASYBANK/ACCOUNT/src/main/java/com/alfarays/exceptions/CustomerAlreadyExistsException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MICROSERVICES-EASYBANK/ACCOUNT/src/main/java/com/alfarays/exceptions/GlobalExceptionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MICROSERVICES-EASYBANK/ACCOUNT/src/main/java/com/alfarays/exceptions/ResourceNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MICROSERVICES-EASYBANK/ACCOUNT/src/main/java/com/alfarays/mapper/AccountsMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MICROSERVICES-EASYBANK/ACCOUNT/src/main/java/com/alfarays/mapper/CustomerMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MICROSERVICES-EASYBANK/ACCOUNT/src/main/java/com/alfarays/repository/AccountsRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MICROSERVICES-EASYBANK/ACCOUNT/src/main/java/com/alfarays/repository/CustomerRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MICROSERVICES-EASYBANK/ACCOUNT/src/main/java/com/alfarays/resources/AccountResource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MICROSERVICES-EASYBANK/ACCOUNT/src/main/java/com/alfarays/service/AccountService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MICROSERVICES-EASYBANK/ACCOUNT/src/main/java/com/alfarays/service/IAccountService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MICROSERVICES-EASYBANK/ACCOUNT/src/main/resources/schema.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MICROSERVICES-EASYBANK/CARDS/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MICROSERVICES-EASYBANK/CARDS/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MICROSERVICES-EASYBANK/CARDS/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MICROSERVICES-EASYBANK/CARDS/src/main/java/com/alfarays/AuditAwareImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MICROSERVICES-EASYBANK/CARDS/src/main/java/com/alfarays/CardsApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MICROSERVICES-EASYBANK/CARDS/src/main/java/com/alfarays/constants/CardsConstants.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MICROSERVICES-EASYBANK/CARDS/src/main/java/com/alfarays/dto/CardsDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MICROSERVICES-EASYBANK/CARDS/src/main/java/com/alfarays/dto/ErrorResponseDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MICROSERVICES-EASYBANK/CARDS/src/main/java/com/alfarays/dto/ResponseDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MICROSERVICES-EASYBANK/CARDS/src/main/java/com/alfarays/entity/BaseEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MICROSERVICES-EASYBANK/CARDS/src/main/java/com/alfarays/entity/Cards.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MICROSERVICES-EASYBANK/CARDS/src/main/java/com/alfarays/exceptions/CardAlreadyExistsException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MICROSERVICES-EASYBANK/CARDS/src/main/java/com/alfarays/exceptions/GlobalExceptionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MICROSERVICES-EASYBANK/CARDS/src/main/java/com/alfarays/exceptions/ResourceNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MICROSERVICES-EASYBANK/CARDS/src/main/java/com/alfarays/mapper/CardsMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MICROSERVICES-EASYBANK/CARDS/src/main/java/com/alfarays/repository/CardsRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MICROSERVICES-EASYBANK/CARDS/src/main/java/com/alfarays/resources/CardResource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MICROSERVICES-EASYBANK/CARDS/src/main/java/com/alfarays/service/CardsServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MICROSERVICES-EASYBANK/CARDS/src/main/java/com/alfarays/service/ICardsService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MICROSERVICES-EASYBANK/CARDS/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MICROSERVICES-EASYBANK/CARDS/src/main/resources/schema.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MICROSERVICES-EASYBANK/CARDS/src/test/java/com/alfarays/CardsApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MICROSERVICES-EASYBANK/LOANS/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MICROSERVICES-EASYBANK/LOANS/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MICROSERVICES-EASYBANK/LOANS/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MICROSERVICES-EASYBANK/LOANS/src/main/java/com/alfarays/LoansApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MICROSERVICES-EASYBANK/LOANS/src/main/java/com/alfarays/audit/AuditAwareImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MICROSERVICES-EASYBANK/LOANS/src/main/java/com/alfarays/constants/LoansConstants.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MICROSERVICES-EASYBANK/LOANS/src/main/java/com/alfarays/dto/ErrorResponseDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MICROSERVICES-EASYBANK/LOANS/src/main/java/com/alfarays/dto/LoansDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MICROSERVICES-EASYBANK/LOANS/src/main/java/com/alfarays/dto/ResponseDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MICROSERVICES-EASYBANK/LOANS/src/main/java/com/alfarays/entity/BaseEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MICROSERVICES-EASYBANK/LOANS/src/main/java/com/alfarays/entity/Loans.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MICROSERVICES-EASYBANK/LOANS/src/main/java/com/alfarays/exceptions/GlobalExceptionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MICROSERVICES-EASYBANK/LOANS/src/main/java/com/alfarays/exceptions/LoanAlreadyExistsException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MICROSERVICES-EASYBANK/LOANS/src/main/java/com/alfarays/exceptions/ResourceNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MICROSERVICES-EASYBANK/LOANS/src/main/java/com/alfarays/mapper/LoansMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MICROSERVICES-EASYBANK/LOANS/src/main/java/com/alfarays/repository/LoansRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MICROSERVICES-EASYBANK/LOANS/src/main/java/com/alfarays/resource/LoansResource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MICROSERVICES-EASYBANK/LOANS/src/main/java/com/alfarays/service/ILoansService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MICROSERVICES-EASYBANK/LOANS/src/main/java/com/alfarays/service/LoansServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MICROSERVICES-EASYBANK/LOANS/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MICROSERVICES-EASYBANK/LOANS/src/main/resources/schema.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MICROSERVICES-EASYBANK/LOANS/src/test/java/com/alfarays/LoansApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/docker-compose/default/common-config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker/docker-compose/default/common-config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/docker-compose/default/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker/docker-compose/default/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SERIES 2025/BOOK-STORE-MANAGEMENT-SYSTEM/docker-compose.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SPRING-BOOT-ANGULAR-AWS/AZURE-DEMO/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SPRING-BOOT-ANGULAR-AWS/AZURE-DEMO/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SPRING-BOOT-ANGULAR-AWS/AZURE-DEMO/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SPRING-BOOT-ANGULAR-AWS/AZURE-DEMO/docker-compose.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SPRING-BOOT-ANGULAR-AWS/AZURE-DEMO/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SPRING-BOOT-ANGULAR-AWS/AZURE-DEMO/src/main/groovy/com/azure/AzureDemoApplication.groovy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SPRING-BOOT-ANGULAR-AWS/AZURE-DEMO/src/main/groovy/com/azure/resource/TestResource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SPRING-BOOT-ANGULAR-AWS/AZURE-DEMO/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SPRING-BOOT-ANGULAR-AWS/AZURE-DEMO/src/test/groovy/com/azure/AzureDemoApplicationTests.groovy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SPRING-BOOT-ANGULAR-AWS/FOOD-DELIVERY-APP/CONFIG-SERVER/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SPRING-BOOT-ANGULAR-AWS/FOOD-DELIVERY-APP/CONFIG-SERVER/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SPRING-BOOT-ANGULAR-AWS/FOOD-DELIVERY-APP/CONFIG-SERVER/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SPRING-BOOT-ANGULAR-AWS/FOOD-DELIVERY-APP/CONFIG-SERVER/src/main/java/com/alfarays/ConfigServerApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SPRING-BOOT-ANGULAR-AWS/FOOD-DELIVERY-APP/CONFIG-SERVER/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SPRING-BOOT-ANGULAR-AWS/FOOD-DELIVERY-APP/CONFIG-SERVER/src/test/java/com/alfarays/ConfigServerApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SPRING-BOOT-ANGULAR-AWS/FOOD-DELIVERY-APP/USER-SERVICE/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SPRING-BOOT-ANGULAR-AWS/FOOD-DELIVERY-APP/USER-SERVICE/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SPRING-BOOT-ANGULAR-AWS/FOOD-DELIVERY-APP/USER-SERVICE/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SPRING-BOOT-ANGULAR-AWS/FOOD-DELIVERY-APP/USER-SERVICE/src/main/java/com/alfarays/UserServiceApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SPRING-BOOT-ANGULAR-AWS/FOOD-DELIVERY-APP/USER-SERVICE/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SPRING-BOOT-ANGULAR-AWS/FOOD-DELIVERY-APP/USER-SERVICE/src/test/java/com/alfarays/UserServiceApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SPRING_SECURITY_MASTER_COURSE/practices/SPRING-SECURITY-SEC-1/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SPRING_SECURITY_MASTER_COURSE/practices/SPRING-SECURITY-SEC-1/src/main/java/com/alfarays/controller/WelcomeController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SPRING_SECURITY_MASTER_COURSE/spring-security-3.3.0/section4/README.md" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="KubernetesApiProvider">{
+  &quot;contexts&quot;: [
+    {
+      &quot;name&quot;: &quot;iam-root-account@demo-cluster.us-east-1.eksctl.io&quot;
+    }
+  ],
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="KubernetesSettings">
+    <option name="contextName" value="iam-root-account@demo-cluster.us-east-1.eksctl.io" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="35mxYgwdMuBsASafsvTQB1fqTnG" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="openDirectoriesWithSingleClick" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.CartServiceApplication.executor": "Run",
+    "Spring Boot.ClientApplication.executor": "Run",
+    "Spring Boot.ConfigServerApplication.executor": "Run",
+    "Spring Boot.DiscoveryServerApplication.executor": "Run",
+    "Spring Boot.GatewayServerApplication.executor": "Run",
+    "Spring Boot.OrderServiceApplication.executor": "Run",
+    "Spring Boot.PaymentServiceApplication.executor": "Run",
+    "Spring Boot.ProductServiceApplication.executor": "Run",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/rupeshdulal/Desktop/PURELY-GOODS/.github/workflows",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "run.configurations.included.in.services": "true",
+    "settings.editor.selected.configurable": "reference.settings.ide.settings.new.ui",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/.github/workflows" />
+      <recent name="$PROJECT_DIR$/docker/backend" />
+      <recent name="$PROJECT_DIR$/docker/docker-compose/staging" />
+      <recent name="$PROJECT_DIR$/config-server/src/main/resources/config" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/docker/docker-compose/default" />
+      <recent name="$PROJECT_DIR$/docker" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="MicronautRunConfigurationType" />
+        <option value="QuarkusRunConfigurationType" />
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.ProductServiceApplication">
+    <configuration name="CartServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="cart-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.alfarays.CartServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConfigServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="config-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.alfarays.ConfigServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DiscoveryServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="discovery-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.alfarays.DiscoveryServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GatewayServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="gateway-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.alfarays.GatewayServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OrderServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="order-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.alfarays.OrderServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PaymentServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="payment-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.alfarays.PaymentServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="product-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.alfarays.ProductServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bd3821a4-c1c5-4740-bcb1-4f0326bf6f37" name="Changes" comment="" />
+      <created>1763729098854</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1763729098854</updated>
+      <workItem from="1763729099983" duration="3216000" />
+      <workItem from="1763742473058" duration="692000" />
+      <workItem from="1763743194068" duration="2426000" />
+      <workItem from="1763866792720" duration="19028000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="com.apollographql.ijplugin.settings.ProjectSettingsState">
+    <option name="hasEnabledGraphQLPluginApolloKotlinSupport" value="true" />
+    <option name="telemetryInstanceId" value="5ecbebb6-f990-4536-aa0e-82477806270f" />
+  </component>
+</project>
