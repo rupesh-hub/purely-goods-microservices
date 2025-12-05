@@ -108,35 +108,7 @@
       <change afterPath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/JENKINS-MASTER/JENKINS-DEMO-PROJECT-01/src/main/resources/application.yaml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/JENKINS-MASTER/JENKINS-DEMO-PROJECT-01/src/test/java/com/alfarays/JenkinsDemoProject01ApplicationTests.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/docker/docker-compose/default/docker-compose.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/docker-compose/observability/alloy/alloy-local-config.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/docker-compose/observability/grafana/datasource.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/docker-compose/observability/loki/loki-config.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/docker-compose/observability/prometheus/prometheus.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/docker-compose/observability/tempo/tempo.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/docker-compose/production/common-config.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/docker-compose/production/docker-compose.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/docker-compose/staging/docker-compose.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/frontend/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/frontend/readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/nginx.conf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/constants/api.constants.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/app/constants/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/environments/environment.docker.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/environments/environment.production.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/environments/environment.staging.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/environments/environment.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway-server/src/main/java/com/alfarays/configuration/CustomSecurityConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway-server/src/main/java/com/alfarays/configuration/KeycloakRoleConverter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/alfarays/functions/NotificationFunctions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/alfarays/model/OrderConfirmationDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/circuit-breaker.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/alfarays/client/ProductFallback.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/alfarays/enums/OrderStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/alfarays/functions/OrderFunctions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/alfarays/model/GlobalResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/alfarays/model/OrderConfirmationDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/alfarays/model/OrderResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/alfarays/service/OrderService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/docker-compose/readme.md" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../microservices-3.4.1/section8/configserver/src/main/resources/config/eurekaserver.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/.github/workflows/product-service-pipeline.yml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/AUTHORIZATION-SERVICE/.gitattributes" beforeDir="false" />
@@ -350,38 +322,12 @@
       <change beforePath="$PROJECT_DIR$/../MICROSERVICES-EASYBANK/LOANS/src/main/resources/application.yml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../MICROSERVICES-EASYBANK/LOANS/src/main/resources/schema.sql" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../MICROSERVICES-EASYBANK/LOANS/src/test/java/com/alfarays/LoansApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/cart-service-pipeline.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/cart-service-pipeline.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/config-server-pipeline.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/config-server-pipeline.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/discovery-server-pipeline.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/discovery-server-pipeline.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/gateway-server-pipeline.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/gateway-server-pipeline.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/order-service-pipeline.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/order-service-pipeline.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/payment-service-pipeline.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/payment-service-pipeline.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/product-service-pipeline.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/product-service-pipeline.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cart-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cart-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/config-server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/config/cart-service.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config-server/src/main/resources/config/payment-service.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/discovery-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/discovery-server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/discovery-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/discovery-server/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker/docker-compose/default" beforeDir="false" afterPath="$PROJECT_DIR$/docker/docker-compose/default" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker/docker-compose/default/common-config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker/docker-compose/default/common-config.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker/docker-compose/default/docker-compose.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/docker-compose/staging/common-config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker/docker-compose/staging/common-config.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/docker-compose/staging/docker-compose.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-server/src/main/java/com/alfarays/GatewayServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-server/src/main/java/com/alfarays/GatewayServerApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-server/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/alfarays/client/ProductServiceClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/alfarays/client/ProductServiceClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/alfarays/model/ProductResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/alfarays/model/ProductResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/alfarays/resource/OrderResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/alfarays/resource/OrderResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/payment-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/payment-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/alfarays/resource/CategoryResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/alfarays/resource/CategoryResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/alfarays/resource/ProductResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/java/com/alfarays/resource/ProductResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/docker-compose/production/common-config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker/docker-compose/production/common-config.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/docker-compose/production/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker/docker-compose/production/docker-compose.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/docker-compose/staging/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker/docker-compose/staging/docker-compose.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SERIES 2025/BOOK-STORE-MANAGEMENT-SYSTEM/docker-compose.yml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../SPRING-BOOT-ANGULAR-AWS/AZURE-DEMO/.gitattributes" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../SPRING-BOOT-ANGULAR-AWS/AZURE-DEMO/.gitignore" beforeDir="false" />
@@ -582,7 +528,7 @@
       <workItem from="1763866792720" duration="19210000" />
       <workItem from="1763956540440" duration="16108000" />
       <workItem from="1764043107399" duration="9853000" />
-      <workItem from="1764927503637" duration="6269000" />
+      <workItem from="1764927503637" duration="7938000" />
     </task>
     <servers />
   </component>
