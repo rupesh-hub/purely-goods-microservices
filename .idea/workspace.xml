@@ -108,7 +108,6 @@
       <change afterPath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/JENKINS-MASTER/JENKINS-DEMO-PROJECT-01/src/main/resources/application.yaml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/JENKINS-MASTER/JENKINS-DEMO-PROJECT-01/src/test/java/com/alfarays/JenkinsDemoProject01ApplicationTests.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/docker/docker-compose/default/docker-compose.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker/docker-compose/readme.md" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../microservices-3.4.1/section8/configserver/src/main/resources/config/eurekaserver.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/.github/workflows/product-service-pipeline.yml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../DEVOPS-FULL-COURSE/DEVOPS-PRACTICES/AUANTUM-CART/AUTHORIZATION-SERVICE/.gitattributes" beforeDir="false" />
@@ -322,12 +321,10 @@
       <change beforePath="$PROJECT_DIR$/../MICROSERVICES-EASYBANK/LOANS/src/main/resources/application.yml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../MICROSERVICES-EASYBANK/LOANS/src/main/resources/schema.sql" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../MICROSERVICES-EASYBANK/LOANS/src/test/java/com/alfarays/LoansApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/payment-service-pipeline.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/payment-service-pipeline.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker/docker-compose/default" beforeDir="false" afterPath="$PROJECT_DIR$/docker/docker-compose/default" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker/docker-compose/default/common-config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker/docker-compose/default/common-config.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker/docker-compose/default/docker-compose.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/docker-compose/production/common-config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker/docker-compose/production/common-config.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/docker-compose/production/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker/docker-compose/production/docker-compose.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/docker-compose/staging/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker/docker-compose/staging/docker-compose.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SERIES 2025/BOOK-STORE-MANAGEMENT-SYSTEM/docker-compose.yml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../SPRING-BOOT-ANGULAR-AWS/AZURE-DEMO/.gitattributes" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../SPRING-BOOT-ANGULAR-AWS/AZURE-DEMO/.gitignore" beforeDir="false" />
@@ -528,7 +525,7 @@
       <workItem from="1763866792720" duration="19210000" />
       <workItem from="1763956540440" duration="16108000" />
       <workItem from="1764043107399" duration="9853000" />
-      <workItem from="1764927503637" duration="7938000" />
+      <workItem from="1764927503637" duration="10166000" />
     </task>
     <servers />
   </component>
