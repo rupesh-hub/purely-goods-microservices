@@ -39,7 +39,7 @@ public class ProductResource {
 
     private final IProductService productService;
 
-    @PostMapping(consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    @PostMapping(value = "/create", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     @Operation(
             summary = "Create a new product",
             description = "Allows creation of a product along with specifications and multiple image uploads."
@@ -89,11 +89,7 @@ public class ProductResource {
             ProductResponse response = productService.create(request);
             return ResponseEntity.status(HttpStatus.CREATED).body(response);
 
-        } catch (JsonProcessingException e) {
-            return ResponseEntity.badRequest()
-                    .body(null);
-
-        } catch (IllegalArgumentException e) {
+        } catch (JsonProcessingException | IllegalArgumentException e) {
             return ResponseEntity.badRequest()
                     .body(null);
 
@@ -149,11 +145,7 @@ public class ProductResource {
 
             return ResponseEntity.ok(productService.update(id, request));
 
-        } catch (JsonProcessingException e) {
-            return ResponseEntity.badRequest()
-                    .body(null);
-
-        } catch (IllegalArgumentException e) {
+        } catch (JsonProcessingException | IllegalArgumentException e) {
             return ResponseEntity.badRequest()
                     .body(null);
 
@@ -181,7 +173,7 @@ public class ProductResource {
         }
     }
 
-    @GetMapping
+    @GetMapping("/get.all")
     @Operation(summary = "Get all products")
     public ResponseEntity<List<ProductResponse>> getAll() {
         return ResponseEntity.ok(productService.getAll());

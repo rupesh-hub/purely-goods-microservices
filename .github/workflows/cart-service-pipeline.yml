@@ -3,12 +3,15 @@ name: CART SERVICE PIPELINE
 on:
   push:
     branches:
-      - main
+      - dev
     paths:
       - cart-service/**
       - docker/backend/cart-service/Dockerfile
-      - docker/docker-compose/default/docker-compose.yml
+      - docker/docker-compose/default/docker-compose.yaml
       - .github/workflows/cart-service-*.yml
+
+env:
+  PROJECT_NAME: 'cart-service'
 
 jobs:
   compile:
@@ -28,7 +31,7 @@ jobs:
 
       - name: Compile project
         run: |
-          cd cart-service
+          cd ${{ env.PROJECT_NAME }}
           ./mvnw clean compile -DskipTests
 
   unit-tests:
@@ -48,13 +51,13 @@ jobs:
 
       - name: Unit test
         run: |
-          cd cart-service
+          cd ${{ env.PROJECT_NAME }}
           ./mvnw clean test
 
   build:
     runs-on: self-hosted
     name: Build project
-    needs: [compile, unit-tests]
+    needs: [ compile, unit-tests ]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -69,13 +72,13 @@ jobs:
 
       - name: Build project
         run: |
-          cd cart-service
+          cd ${{ env.PROJECT_NAME }}
           ./mvnw clean package -DskipTests
 
   docker:
     runs-on: self-hosted
     name: Build and push to Docker Hub
-    needs: [build]
+    needs: [ build ]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -88,15 +91,10 @@ jobs:
           java-version: 17
           distribution: 'corretto'
 
-      - name: Build project
-        run: |
-          cd cart-service
-          ./mvnw clean package
-
       - name: Extract project version
         id: extract_version
         run: |
-          cd cart-service
+          cd ${{ env.PROJECT_NAME }}
           echo "VERSION=$(./mvnw -q -Dexec.executable='echo' -Dexec.args='${project.version}' --non-recursive exec:exec)" >> $GITHUB_OUTPUT
 
       - name: Login to Docker Hub
@@ -111,14 +109,16 @@ jobs:
       - name: Build and Push to Docker Hub
         uses: docker/build-push-action@v5
         with:
-          context: cart-service
-          file: docker/backend/cart-service/Dockerfile
+          context: ./${{ env.PROJECT_NAME }}
+          file: ./docker/backend/${{ env.PROJECT_NAME }}/Dockerfile
           push: true
           platforms: linux/amd64
-          tags: ${{ secrets.DOCKER_USERNAME }}/cart-service:${{ steps.extract_version.outputs.VERSION }},${{ secrets.DOCKER_USERNAME }}/cart-service:latest
+          tags: |
+            ${{ secrets.DOCKER_USERNAME }}/${{ env.PROJECT_NAME }}:${{ steps.extract_version.outputs.VERSION }}
+            ${{ secrets.DOCKER_USERNAME }}/${{ env.PROJECT_NAME }}:latest
           build-args: |
-            PROFILE=default
-            APP_VERSION=${{ steps.extract_version.outputs.VERSION }}
+            ACTIVE_PROFILE=default
+            JAR_VERSION=${{ steps.extract_version.outputs.VERSION }}
 
   deployment:
     name: Deploy order service
@@ -136,15 +136,15 @@ jobs:
 
       - name: Copy docker compose file
         run: |
-          scp docker/docker-compose/default/docker-compose.yml ${{ secrets.VPS_USERNAME }}@${{ secrets.VPS_IP }}:deployment/docker-compose.yml
+          scp docker/docker-compose/production/docker-compose.yaml ${{ secrets.VPS_USERNAME }}@${{ secrets.VPS_IP }}:deployment/docker-compose.yaml
+          scp docker/docker-compose/production/common-config.yaml ${{ secrets.VPS_USERNAME }}@${{ secrets.VPS_IP }}:deployment/common-config.yaml
 
       - name: Set Environment Variables
         run: |
           ssh ${{ secrets.VPS_USERNAME }}@${{ secrets.VPS_IP }} <<EOF
           cd deployment
-          docker-compose -f docker-compose.yml down
-          docker-compose -f docker-compose.yml pull -q
-          docker-compose -f docker-compose.yml up -d
+          docker system prune -f
+          docker-compose -f docker-compose.yaml down
+          docker-compose -f docker-compose.yaml pull -q
+          docker-compose -f docker-compose.yaml up -d
           EOF
-          
-

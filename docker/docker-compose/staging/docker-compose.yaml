@@ -1,0 +1,414 @@
+services:
+
+  read:
+    image: grafana/loki:3.1.2
+    command: "-config.file=/etc/loki/config.yaml -target=read"
+    ports:
+      - 3101:3100
+      - 7946
+      - 9095
+    volumes:
+      - ../observability/loki/loki-config.yaml:/etc/loki/config.yaml
+    depends_on:
+      - minio
+    healthcheck:
+      test: [ "CMD-SHELL", "wget --no-verbose --tries=1 --spider http://localhost:3100/ready || exit 1" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks: &loki-dns
+      eazybank:
+        aliases:
+          - loki
+
+  write:
+    image: grafana/loki:3.1.2
+    command: "-config.file=/etc/loki/config.yaml -target=write"
+    ports:
+      - 3102:3100
+      - 7946
+      - 9095
+    volumes:
+      - ../observability/loki/loki-config.yaml:/etc/loki/config.yaml
+    healthcheck:
+      test: [ "CMD-SHELL", "wget --no-verbose --tries=1 --spider http://localhost:3100/ready || exit 1" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    depends_on:
+      - minio
+    networks:
+      <<: *loki-dns
+
+
+  alloy:
+    image: grafana/alloy:v1.5.1
+    volumes:
+      - ../observability/alloy/alloy-local-config.yaml:/etc/alloy/config.alloy:ro
+      - /var/run/docker.sock:/var/run/docker.sock
+    command: run --server.http.listen-addr=0.0.0.0:12345 --storage.path=/var/lib/alloy/data /etc/alloy/config.alloy
+    ports:
+      - 12345:12345
+    depends_on:
+      - gateway
+    extends:
+      file: common-config.yaml
+      service: network-deploy-service
+
+  minio:
+    image: minio/minio:RELEASE.2024-12-18T13-15-44Z
+    entrypoint:
+      - sh
+      - -euc
+      - |
+        mkdir -p /data/loki-data && \
+        mkdir -p /data/loki-ruler && \
+        minio server /data
+    environment:
+      - MINIO_ROOT_USER=loki
+      - MINIO_ROOT_PASSWORD=supersecret
+      - MINIO_PROMETHEUS_AUTH_TYPE=public
+      - MINIO_UPDATE=off
+    ports:
+      - 9000
+    volumes:
+      - ./.data/minio:/data
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:9000/minio/health/live" ]
+      interval: 15s
+      timeout: 20s
+      retries: 5
+    extends:
+      file: common-config.yaml
+      service: network-deploy-service
+
+  prometheus:
+    image: prom/prometheus:v3.1.0
+    container_name: prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ../observability/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+    extends:
+      file: common-config.yaml
+      service: network-deploy-service
+
+  tempo:
+    image: grafana/tempo:2.6.1
+    container_name: tempo
+    command: -config.file /etc/tempo-config.yml
+    ports:
+      - "3110:3100"
+      - "4318:4318"
+    volumes:
+      - ../observability/tempo/tempo.yml:/etc/tempo-config.yml
+    extends:
+      file: common-config.yaml
+      service: network-deploy-service
+
+  grafana:
+    image: grafana/grafana:11.4.0
+    environment:
+      - GF_PATHS_PROVISIONING=/etc/grafana/provisioning
+      - GF_AUTH_ANONYMOUS_ENABLED=true
+      - GF_AUTH_ANONYMOUS_ORG_ROLE=Admin
+    depends_on:
+      - gateway
+    entrypoint:
+      - sh
+      - -euc
+      - |
+        /run.sh
+    ports:
+      - "3000:3000"
+    volumes:
+      - ../observability/grafana/datasource.yml:/etc/grafana/provisioning/datasources/datasource.yml
+    healthcheck:
+      test: [ "CMD-SHELL", "wget --no-verbose --tries=1 --spider http://localhost:3000/api/health || exit 1" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    extends:
+      file: common-config.yaml
+      service: network-deploy-service
+
+  backend:
+    image: grafana/loki:3.1.2
+    volumes:
+      - ../observability/loki/loki-config.yaml:/etc/loki/config.yaml
+    ports:
+      - "3100"
+      - "7946"
+    command: "-config.file=/etc/loki/config.yaml -target=backend -legacy-read-mode=false"
+    depends_on:
+      - gateway
+    extends:
+      file: common-config.yaml
+      service: network-deploy-service
+
+  gateway:
+    image: nginx:1.27.3
+    depends_on:
+      - read
+      - write
+    entrypoint:
+      - sh
+      - -euc
+      - |
+        cat <<EOF > /etc/nginx/nginx.conf
+        user  nginx;
+        worker_processes  5;  ## Default: 1
+        
+        events {
+          worker_connections   1000;
+        }
+        
+        http {
+          resolver 127.0.0.11;
+        
+          server {
+            listen             3100;
+        
+            location = / {
+              return 200 'OK';
+              auth_basic off;
+            }
+        
+            location = /api/prom/push {
+              proxy_pass       http://write:3100\$$request_uri;
+            }
+        
+            location = /api/prom/tail {
+              proxy_pass       http://read:3100\$$request_uri;
+              proxy_set_header Upgrade \$$http_upgrade;
+              proxy_set_header Connection "upgrade";
+            }
+        
+            location ~ /api/prom/.* {
+              proxy_pass       http://read:3100\$$request_uri;
+            }
+        
+            location = /loki/api/v1/push {
+              proxy_pass       http://write:3100\$$request_uri;
+            }
+        
+            location = /loki/api/v1/tail {
+              proxy_pass       http://read:3100\$$request_uri;
+              proxy_set_header Upgrade \$$http_upgrade;
+              proxy_set_header Connection "upgrade";
+            }
+        
+            location ~ /loki/api/.* {
+              proxy_pass       http://read:3100\$$request_uri;
+            }
+          }
+        }
+        EOF
+        /docker-entrypoint.sh nginx -g "daemon off;"
+    ports:
+      - "3100:3100"
+    healthcheck:
+      test: [ "CMD", "service", "nginx", "status" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    extends:
+      file: common-config.yaml
+      service: network-deploy-service
+
+  keycloak:
+    image: quay.io/keycloak/keycloak:26.4.0
+    container_name: keycloak
+    ports:
+      - "127.0.0.1:7080:8080"
+    environment:
+      KC_BOOTSTRAP_ADMIN_USERNAME: "admin"
+      KC_BOOTSTRAP_ADMIN_PASSWORD: "admin"
+    command: "start-dev"
+    extends:
+      file: common-config.yaml
+      service: network-configuration
+
+  rabbit:
+    image: rabbitmq:4.0-management
+    hostname: rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    healthcheck:
+      test: rabbitmq-diagnostics check_port_connectivity
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 5s
+    extends:
+      file: common-config.yaml
+      service: network-configuration
+
+  config-server:
+    image: "rupesh1997/config-server:1.0.0"
+    container_name: config-server
+    ports:
+      - "8071:8071"
+    healthcheck:
+      test: "curl --fail --silent localhost:8071/actuator/health/readiness | grep UP || exit 1"
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
+    extends:
+      file: common-config.yaml
+      service: microservice-configuration
+    environment:
+      SPRING_APPLICATION_NAME: "config-server"
+      SPRING_PROFILES_ACTIVE: git
+
+  discovery-server:
+    image: "rupesh1997/discovery-server:1.0.0"
+    container_name: discovery-server
+    ports:
+      - "8070:8070"
+    depends_on:
+      config-server:
+        condition: service_healthy
+    healthcheck:
+      test: "curl --fail --silent localhost:8070/actuator/health/readiness | grep UP || exit 1"
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
+    extends:
+      file: common-config.yaml
+      service: microservice-config-server-configuration
+    environment:
+      SPRING_APPLICATION_NAME: "discovery-server"
+
+  product-db:
+    container_name: product-db
+    image: mysql:8.0
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: products
+    restart: always
+    volumes:
+      - mysql-data:/var/lib/mysql
+    healthcheck:
+      test: [ "CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-proot" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 60s
+    extends:
+      file: common-config.yaml
+      service: network-configuration
+
+  product-service:
+    image: "rupesh1997/product-service:1.0.0"
+    container_name: product-service
+    depends_on:
+      discovery-server:
+        condition: service_healthy
+      product-db:
+        condition: service_healthy
+    environment:
+      SPRING_APPLICATION_NAME: "product-service"
+      SPRING_DATASOURCE_URL: jdbc:mysql://product-db:3306/products
+    extends:
+      file: common-config.yaml
+      service: microservice-discovery-server-configuration
+
+  order-service:
+    image: "rupesh1997/order-service:1.0.0"
+    container_name: order-service
+    depends_on:
+      discovery-server:
+        condition: service_healthy
+      product-db:
+        condition: service_healthy
+      rabbit:
+        condition: service_started
+    environment:
+      SPRING_APPLICATION_NAME: "order-service"
+      SPRING_DATASOURCE_URL: jdbc:mysql://product-db:3306/products
+      SPRING_RABBITMQ_HOST: "rabbit"
+    extends:
+      file: common-config.yaml
+      service: microservice-discovery-server-configuration
+
+  cart-service:
+    image: "rupesh1997/cart-service:1.0.0"
+    container_name: cart-service
+    depends_on:
+      discovery-server:
+        condition: service_healthy
+    environment:
+      SPRING_APPLICATION_NAME: "cart-service"
+    extends:
+      file: common-config.yaml
+      service: microservice-discovery-server-configuration
+
+  payment-service:
+    image: "rupesh1997/payment-service:1.0.0"
+    container_name: payment-service
+    depends_on:
+      discovery-server:
+        condition: service_healthy
+    environment:
+      SPRING_APPLICATION_NAME: "payment-service"
+    extends:
+      file: common-config.yaml
+      service: microservice-discovery-server-configuration
+
+  notification-service:
+    image: "rupesh1997/notification-service:1.0.0"
+    container_name: notification-service
+    depends_on:
+      rabbit:
+        condition: service_started
+    environment:
+      SPRING_APPLICATION_NAME: "notification-service"
+      SPRING_RABBITMQ_HOST: "rabbit"
+    extends:
+      file: common-config.yaml
+      service: network-configuration
+
+  gateway-server:
+    image: "rupesh1997/gateway-server:1.0.0"
+    container_name: gateway-server
+    ports:
+      - "8072:8072"
+    depends_on:
+      discovery-server:
+        condition: service_started
+      product-service:
+        condition: service_started
+      order-service:
+        condition: service_started
+      notification-service:
+        condition: service_started
+    environment:
+      SPRING_APPLICATION_NAME: "gateway-server"
+      SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_JWK-SET-URI: http://keycloak:8080/realms/master/protocol/openid-connect/certs
+    extends:
+      file: common-config.yaml
+      service: microservice-discovery-server-configuration
+
+networks:
+  purely-goods-nw:
+    driver: "bridge"
+
+volumes:
+  mysql-data:
+
+  # docker system prune -f
+  # docker compose -f docker/docker-compose/default/docker-compose.yaml down
+  # docker compose -f docker/docker-compose/default/docker-compose.yaml up -d
+  # docker logs <container-id>
+  # cat ~/.ssh/id_rsa
+
+  #docker exec -it product-service sh -c "printenv | grep EUREKA"
+  #EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://discovery-server:8070/eureka/
+  #http://localhost:8070/eureka/apps
+  # docker exec -it order-service sh -c "curl -s http://localhost:8082/actuator/eureka | grep registry"

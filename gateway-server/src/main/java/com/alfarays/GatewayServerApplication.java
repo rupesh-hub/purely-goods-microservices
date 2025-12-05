@@ -19,22 +19,51 @@ public class GatewayServerApplication {
     public RouteLocator routeConfig(RouteLocatorBuilder builder) {
         return builder.routes()
 
-                // PRODUCT SERVICE = http://localhost:8072/product-service/** -> redirect to -> http://PRODUCT-SERVICE/product-service/api/v1.0.0/products/**
+                // PRODUCT SERVICE
+                /** .route(p -> p
+                 .path("/product-service/**")
+                 .filters(f -> f
+                 .rewritePath("/product-service/(?<segment>.*)", "/api/v1.0.0/products/${segment}")
+                 .addResponseHeader("X-Response-Time", LocalDateTime.now().toString()))
+                 .uri("lb://PRODUCT-SERVICE"))
+
+                 // ----------------- PRODUCTS -----------------
+                 .route("product_route", p -> p
+                 .path("/product-service/products/**")
+                 .filters(f -> f
+                 .rewritePath("/product-service/products/(?<segment>.*)",
+                 "/api/v1.0.0/products/${segment}")
+                 .addResponseHeader("X-Response-Time", LocalDateTime.now().toString()))
+                 .uri("lb://PRODUCT-SERVICE"))
+
+                 // ----------------- CATEGORIES -----------------
+                 .route("category_route", p -> p
+                 .path("/product-service/categories/**")
+                 .filters(f -> f
+                 .rewritePath("/product-service/categories/(?<segment>.*)",
+                 "/api/v1.0.0/categories/${segment}")
+                 .addResponseHeader("X-Response-Time", LocalDateTime.now().toString()))
+                 .uri("lb://PRODUCT-SERVICE"))
+
+                 */
+
                 .route(p -> p
-                        .path("/product-service/**")
+                        .path("/product-service/{entity:products|categories}/**")
                         .filters(f -> f
-                                .rewritePath("/product-service/(?<segment>.*)", "/api/v1.0.0/products/${segment}")
+                                .rewritePath("/product-service/(?<entity>products|categories)/?(?<segment>.*)",
+                                        "/api/v1.0.0/${entity}/${segment}")
                                 .addResponseHeader("X-Response-Time", LocalDateTime.now().toString()))
                         .uri("lb://PRODUCT-SERVICE"))
-
 
                 // ORDER SERVICE
                 .route(p -> p
                         .path("/order-service/**")
                         .filters(f -> f
-                                .rewritePath("/order-service/(?<segment>.*)", "/orders/${segment}")
+                                .rewritePath("/order-service/?(?<segment>.*)",
+                                        "/orders/${segment}")
                                 .addResponseHeader("X-Response-Time", LocalDateTime.now().toString()))
                         .uri("lb://ORDER-SERVICE"))
+
 
                 // CART SERVICE
                 .route(p -> p
@@ -62,7 +91,6 @@ public class GatewayServerApplication {
      Gateway picks Eureka instance → http://localhost:8081
      Gateway sends → http://localhost:8081/api/v1.0.0/products/list
      */
-
 
 
 }

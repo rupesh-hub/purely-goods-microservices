@@ -10,11 +10,20 @@ management:
       exposure:
         include: "*"
   health:
-    readiness-state:
+    readinessstate:
       enabled: true
-    liveness-state:
+    livenessstate:
       enabled: true
   endpoint:
     health:
       probes:
         enabled: true
+      show-details: always
+    info:
+      access: read_only
+  info:
+    env:
+      enabled: true
+  metrics:
+    tags:
+      application: ${spring.application.name}

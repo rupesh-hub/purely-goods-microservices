@@ -18,6 +18,7 @@ import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -36,7 +37,7 @@ public class CategoryResource {
     private final ICategoryService categoryService;
 
     // CREATE --------------------------------------------------------------
-    @PostMapping
+    @PostMapping(value = "/create", consumes = MediaType.APPLICATION_JSON_VALUE)
     @Operation(
             summary = "Create a new category",
             description = "Creates a product category and returns the created resource.",
@@ -114,7 +115,7 @@ public class CategoryResource {
     }
 
     // GET ALL -------------------------------------------------------------
-    @GetMapping
+    @GetMapping("get.all")
     @Operation(
             summary = "Get all categories",
             description = "Returns list of all product categories."
